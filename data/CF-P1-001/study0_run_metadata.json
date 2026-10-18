@@ -1,0 +1,33 @@
+{
+  "completed_calls": 288,
+  "estimated_usd_at_recorded_rates": 0.074061,
+  "gates": {
+    "all_status_completed": true,
+    "completed_288": true,
+    "d_inference_hash_invariant_within_arm": true,
+    "d_zero_canary": true,
+    "d_zero_carrier": true,
+    "frozen_model_snapshot": true,
+    "unique_response_ids_288": true,
+    "within_cost_cap": true,
+    "zero_automatic_retries": true
+  },
+  "inference_boundary": "Developmental API draws, not human participants and not a confirmatory sample.",
+  "model_snapshot": "gpt-5.4-mini-2026-03-17",
+  "planned_calls": 288,
+  "release_scope": "sanitized_developmental_study0_results",
+  "removed_private_fields": [
+    "response_id",
+    "authorization metadata",
+    "local filesystem paths"
+  ],
+  "run_id": "20260918T135742Z",
+  "source_dry_run_id": "20260918T134727Z",
+  "source_temperature_gate_id": "20260918T135327Z",
+  "study_id": "CF-P1-001",
+  "technical_pass": true,
+  "temperature": 1.0,
+  "total_input_tokens": 75168,
+  "total_output_tokens": 3930,
+  "total_tokens": 79098
+}

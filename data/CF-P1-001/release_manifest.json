@@ -1,0 +1,24 @@
+{
+  "files": {
+    "README.md": {
+      "bytes": 1200,
+      "sha256": "1a13ac970c88aeec0d3ee7db77dc19f28768f7c5d3497af5cdb56bc6a6743927"
+    },
+    "study0_analysis.json": {
+      "bytes": 8559,
+      "sha256": "04079f8b5a5693091dd46cc74e04072d88824415b62f13ddae7fa2b1a17866a2"
+    },
+    "study0_behavioral_smoke_v2_public.csv": {
+      "bytes": 96497,
+      "sha256": "d8fb7d482ab71e33878b6aff5c8be1676cf514a9c1e0b115e4a7d0a1eb229999"
+    },
+    "study0_cell_results.csv": {
+      "bytes": 2375,
+      "sha256": "fa19f188e4fc23e7d668765caddd283f80ed0ad1fce1485c7c47d7d8c338e695"
+    },
+    "study0_run_metadata.json": {
+      "bytes": 1037,
+      "sha256": "170900a61298844e3bbb3ea83d7f8a9f8dcbffcdc809cb9d234aa4f5bb8d9bb4"
+    }
+  }
+}

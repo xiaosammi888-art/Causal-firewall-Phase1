@@ -1,0 +1,360 @@
+{
+  "analysis_status": "developmental_descriptive_only",
+  "cell_results": [
+    {
+      "architecture": "A_monolithic_prompt",
+      "arm": "human_allocation",
+      "cue": "aligned",
+      "discard": 6,
+      "discard_rate": 0.5,
+      "exact_95_ci": [
+        0.21094463823929666,
+        0.7890553617607032
+      ],
+      "n": 12
+    },
+    {
+      "architecture": "A_monolithic_prompt",
+      "arm": "random_allocation",
+      "cue": "aligned",
+      "discard": 0,
+      "discard_rate": 0.0,
+      "exact_95_ci": [
+        0.0,
+        0.26464846939705133
+      ],
+      "n": 12
+    },
+    {
+      "architecture": "A_monolithic_prompt",
+      "arm": "human_allocation",
+      "cue": "none",
+      "discard": 12,
+      "discard_rate": 1.0,
+      "exact_95_ci": [
+        0.7353515306029488,
+        1.0
+      ],
+      "n": 12
+    },
+    {
+      "architecture": "A_monolithic_prompt",
+      "arm": "random_allocation",
+      "cue": "none",
+      "discard": 0,
+      "discard_rate": 0.0,
+      "exact_95_ci": [
+        0.0,
+        0.26464846939705133
+      ],
+      "n": 12
+    },
+    {
+      "architecture": "A_monolithic_prompt",
+      "arm": "human_allocation",
+      "cue": "reversed",
+      "discard": 0,
+      "discard_rate": 0.0,
+      "exact_95_ci": [
+        0.0,
+        0.26464846939705133
+      ],
+      "n": 12
+    },
+    {
+      "architecture": "A_monolithic_prompt",
+      "arm": "random_allocation",
+      "cue": "reversed",
+      "discard": 0,
+      "discard_rate": 0.0,
+      "exact_95_ci": [
+        0.0,
+        0.26464846939705133
+      ],
+      "n": 12
+    },
+    {
+      "architecture": "B_default_multi_agent",
+      "arm": "human_allocation",
+      "cue": "aligned",
+      "discard": 2,
+      "discard_rate": 0.16666666666666666,
+      "exact_95_ci": [
+        0.020862525460092374,
+        0.48413774868596715
+      ],
+      "n": 12
+    },
+    {
+      "architecture": "B_default_multi_agent",
+      "arm": "random_allocation",
+      "cue": "aligned",
+      "discard": 0,
+      "discard_rate": 0.0,
+      "exact_95_ci": [
+        0.0,
+        0.26464846939705133
+      ],
+      "n": 12
+    },
+    {
+      "architecture": "B_default_multi_agent",
+      "arm": "human_allocation",
+      "cue": "none",
+      "discard": 12,
+      "discard_rate": 1.0,
+      "exact_95_ci": [
+        0.7353515306029488,
+        1.0
+      ],
+      "n": 12
+    },
+    {
+      "architecture": "B_default_multi_agent",
+      "arm": "random_allocation",
+      "cue": "none",
+      "discard": 0,
+      "discard_rate": 0.0,
+      "exact_95_ci": [
+        0.0,
+        0.26464846939705133
+      ],
+      "n": 12
+    },
+    {
+      "architecture": "B_default_multi_agent",
+      "arm": "human_allocation",
+      "cue": "reversed",
+      "discard": 0,
+      "discard_rate": 0.0,
+      "exact_95_ci": [
+        0.0,
+        0.26464846939705133
+      ],
+      "n": 12
+    },
+    {
+      "architecture": "B_default_multi_agent",
+      "arm": "random_allocation",
+      "cue": "reversed",
+      "discard": 1,
+      "discard_rate": 0.08333333333333333,
+      "exact_95_ci": [
+        0.0021075932318602277,
+        0.38479616515094406
+      ],
+      "n": 12
+    },
+    {
+      "architecture": "C_fresh_context_manual_whitelist",
+      "arm": "human_allocation",
+      "cue": "aligned",
+      "discard": 12,
+      "discard_rate": 1.0,
+      "exact_95_ci": [
+        0.7353515306029488,
+        1.0
+      ],
+      "n": 12
+    },
+    {
+      "architecture": "C_fresh_context_manual_whitelist",
+      "arm": "random_allocation",
+      "cue": "aligned",
+      "discard": 1,
+      "discard_rate": 0.08333333333333333,
+      "exact_95_ci": [
+        0.0021075932318602277,
+        0.38479616515094406
+      ],
+      "n": 12
+    },
+    {
+      "architecture": "C_fresh_context_manual_whitelist",
+      "arm": "human_allocation",
+      "cue": "none",
+      "discard": 12,
+      "discard_rate": 1.0,
+      "exact_95_ci": [
+        0.7353515306029488,
+        1.0
+      ],
+      "n": 12
+    },
+    {
+      "architecture": "C_fresh_context_manual_whitelist",
+      "arm": "random_allocation",
+      "cue": "none",
+      "discard": 2,
+      "discard_rate": 0.16666666666666666,
+      "exact_95_ci": [
+        0.020862525460092374,
+        0.48413774868596715
+      ],
+      "n": 12
+    },
+    {
+      "architecture": "C_fresh_context_manual_whitelist",
+      "arm": "human_allocation",
+      "cue": "reversed",
+      "discard": 7,
+      "discard_rate": 0.5833333333333334,
+      "exact_95_ci": [
+        0.2766696856821058,
+        0.8483477701915698
+      ],
+      "n": 12
+    },
+    {
+      "architecture": "C_fresh_context_manual_whitelist",
+      "arm": "random_allocation",
+      "cue": "reversed",
+      "discard": 1,
+      "discard_rate": 0.08333333333333333,
+      "exact_95_ci": [
+        0.0021075932318602277,
+        0.38479616515094406
+      ],
+      "n": 12
+    },
+    {
+      "architecture": "D_labeled_causal_firewall",
+      "arm": "human_allocation",
+      "cue": "aligned",
+      "discard": 12,
+      "discard_rate": 1.0,
+      "exact_95_ci": [
+        0.7353515306029488,
+        1.0
+      ],
+      "n": 12
+    },
+    {
+      "architecture": "D_labeled_causal_firewall",
+      "arm": "random_allocation",
+      "cue": "aligned",
+      "discard": 0,
+      "discard_rate": 0.0,
+      "exact_95_ci": [
+        0.0,
+        0.26464846939705133
+      ],
+      "n": 12
+    },
+    {
+      "architecture": "D_labeled_causal_firewall",
+      "arm": "human_allocation",
+      "cue": "none",
+      "discard": 12,
+      "discard_rate": 1.0,
+      "exact_95_ci": [
+        0.7353515306029488,
+        1.0
+      ],
+      "n": 12
+    },
+    {
+      "architecture": "D_labeled_causal_firewall",
+      "arm": "random_allocation",
+      "cue": "none",
+      "discard": 1,
+      "discard_rate": 0.08333333333333333,
+      "exact_95_ci": [
+        0.0021075932318602277,
+        0.38479616515094406
+      ],
+      "n": 12
+    },
+    {
+      "architecture": "D_labeled_causal_firewall",
+      "arm": "human_allocation",
+      "cue": "reversed",
+      "discard": 11,
+      "discard_rate": 0.9166666666666666,
+      "exact_95_ci": [
+        0.6152038348490558,
+        0.9978924067681398
+      ],
+      "n": 12
+    },
+    {
+      "architecture": "D_labeled_causal_firewall",
+      "arm": "random_allocation",
+      "cue": "reversed",
+      "discard": 0,
+      "discard_rate": 0.0,
+      "exact_95_ci": [
+        0.0,
+        0.26464846939705133
+      ],
+      "n": 12
+    }
+  ],
+  "completed_calls": 288,
+  "estimands": [
+    {
+      "architecture": "A_monolithic_prompt",
+      "delta_aligned": 0.5,
+      "delta_none": 1.0,
+      "delta_reversed": 0.0,
+      "gamma_aligned_minus_reversed": 0.5
+    },
+    {
+      "architecture": "B_default_multi_agent",
+      "delta_aligned": 0.16666666666666666,
+      "delta_none": 1.0,
+      "delta_reversed": -0.08333333333333333,
+      "gamma_aligned_minus_reversed": 0.25
+    },
+    {
+      "architecture": "C_fresh_context_manual_whitelist",
+      "delta_aligned": 0.9166666666666666,
+      "delta_none": 0.8333333333333334,
+      "delta_reversed": 0.5,
+      "gamma_aligned_minus_reversed": 0.41666666666666663
+    },
+    {
+      "architecture": "D_labeled_causal_firewall",
+      "delta_aligned": 1.0,
+      "delta_none": 0.9166666666666666,
+      "delta_reversed": 0.9166666666666666,
+      "gamma_aligned_minus_reversed": 0.08333333333333337
+    }
+  ],
+  "estimated_usd": 0.074061,
+  "gamma_minus_d_placebo": [
+    {
+      "architecture": "A_monolithic_prompt",
+      "gamma_minus_d_placebo": 0.41666666666666663
+    },
+    {
+      "architecture": "B_default_multi_agent",
+      "gamma_minus_d_placebo": 0.16666666666666663
+    },
+    {
+      "architecture": "C_fresh_context_manual_whitelist",
+      "gamma_minus_d_placebo": 0.33333333333333326
+    }
+  ],
+  "interpretation": {
+    "firewall": "D had identical inference payloads across cue labels and Gamma=0.083; its observed label differences are finite-sample Monte Carlo variation, not cue exposure.",
+    "limitation": "Twelve API draws per cell are not power-justified for confirmatory inference and API draws are not human participants.",
+    "signal": "All three cue-exposed architectures had positive directional Gamma; A=0.500, B=0.250, C=0.417."
+  },
+  "run_id": "20260918T135742Z",
+  "shared_no_cue_baseline": {
+    "delta": 0.9375,
+    "human": {
+      "discard": 48,
+      "n": 48
+    },
+    "human_discard_rate": 1.0,
+    "random": {
+      "discard": 3,
+      "n": 48
+    },
+    "random_discard_rate": 0.0625
+  },
+  "study_id": "CF-P1-001",
+  "technical_pass": true
+}
