@@ -1,0 +1,96 @@
+{
+  "identity": {
+    "study_id": "CF-P1-001",
+    "source_study_id": "JEP_4_1b",
+    "contract_version": "0.1.0",
+    "source_article": "Gordon-Hecker et al. (2017), Experiment 1b"
+  },
+  "source": {
+    "archive": "Cui, Li, and Zhou OSF replication archive",
+    "archive_url": "https://osf.io/j6wmn",
+    "normalized_material_sha256": "479288916811a81f15e1e9c012f3481451b15f812e8a97833a19b3b167574c23"
+  },
+  "design": {
+    "type": "two_arm_between_subjects",
+    "assignment_unit": "synthetic_participant_instance",
+    "context_policy": "fresh_context",
+    "persona_replay_across_arms": true,
+    "primary_outcome": "discard_reward",
+    "primary_estimand": "E[Y|human_allocation] - E[Y|random_allocation]"
+  },
+  "population": {
+    "mode": "minimal_persona",
+    "target": "adult synthetic respondents in an anonymous one-shot decision",
+    "claims_population_representativeness": false,
+    "required_persona_fields": [
+      "participant_id",
+      "adult",
+      "decision_context"
+    ]
+  },
+  "materials": {
+    "participant_role": "You are an anonymous adult participant. Make one choice in the situation presented. Do not predict a typical person and do not analyze the research design.",
+    "common_scenario": "A student association has one already-purchased rock concert ticket to reward its best employee. Tal and Gal are tied for first place: their performance and contribution are identical, and both are equally deserving. The prize cannot be divided. Your decision is anonymous.",
+    "arms": {
+      "human_allocation": {
+        "stimulus": "Choose one option: give the ticket to Tal; give the ticket to Gal; or discard the ticket and give it to no one.",
+        "legal_choices": ["tal", "gal", "discard"]
+      },
+      "random_allocation": {
+        "stimulus": "Choose one option: use a random device to allocate the ticket between Tal and Gal; or discard the ticket and give it to no one.",
+        "legal_choices": ["random_device", "discard"]
+      }
+    },
+    "response_schema": {
+      "type": "object",
+      "required": ["choice"],
+      "additionalProperties": false
+    }
+  },
+  "outcomes": {
+    "discard_reward": {
+      "type": "integer",
+      "coding": {
+        "discard": 1,
+        "tal": 0,
+        "gal": 0,
+        "random_device": 0
+      },
+      "generated_by": "deterministic_encoder",
+      "model_may_write": false
+    }
+  },
+  "human_benchmark": {
+    "label": "EMBARGOED_RESULT",
+    "human_allocation": {"discard": 25, "n": 88, "rate": 0.2841},
+    "random_allocation": {"discard": 7, "n": 90, "rate": 0.0778},
+    "risk_difference": 0.2063,
+    "respondent_access": "deny"
+  },
+  "research_restricted": {
+    "hypothesis_text": "Personally bearing responsibility increases reward destruction relative to delegating allocation to a random device.",
+    "expected_direction": "human_allocation > random_allocation",
+    "other_arm_material": "The current participant must not see the opposite arm's choice mechanism."
+  },
+  "participant_packet": {
+    "ordered_fields": [
+      "participant_role",
+      "persona_state",
+      "common_scenario",
+      "current_stimulus",
+      "response_schema"
+    ],
+    "required_fields": [
+      "participant_role",
+      "persona_state",
+      "common_scenario",
+      "current_stimulus",
+      "response_schema"
+    ]
+  },
+  "canaries": {
+    "hypothesis": "CFHYP7X",
+    "other_arm": "CFARM9Q",
+    "human_benchmark": "CFBEN4R"
+  }
+}
