@@ -1,0 +1,134 @@
+{
+  "identity": {
+    "study_id": "CF-P1-001",
+    "run_class": "behavioral_smoke_v2",
+    "contract_version": "0.2.0-draft",
+    "status": "redesigned_not_authorized_for_paid_execution",
+    "supersedes_execution_design": "behavioral_smoke_contract.json@0.1.0-draft"
+  },
+  "decision": {
+    "original_288_call_design": "NO_GO",
+    "revised_288_call_design": "GO_FOR_ZERO_COST_DRY_RUN_ONLY",
+    "reason": "The former persona seeds changed only identifiers and numbers, not substantive pre-treatment attributes, so they cannot be interpreted as distinct synthetic participants."
+  },
+  "purpose": {
+    "primary": "Estimate coarse architecture-by-cue response distributions as a developmental manipulation check after all information-flow properties have passed mechanically.",
+    "not_for": [
+      "estimating a publishable treatment effect",
+      "claiming population or human fidelity",
+      "treating API draws as human participants",
+      "statistical confirmation of firewall effectiveness"
+    ]
+  },
+  "model": {
+    "provider": "openai",
+    "snapshot": "gpt-5.4-mini-2026-03-17",
+    "endpoint": "/v1/responses",
+    "reasoning_effort": "none",
+    "temperature": 1.0,
+    "max_output_tokens": 64,
+    "store": false,
+    "tools": [],
+    "automatic_retries": 0
+  },
+  "sampling": {
+    "unit": "independent_api_response_draw",
+    "replicates_per_cell": 12,
+    "replicate_ids_model_visible": false,
+    "canonical_persona_seed": 1901,
+    "canonical_persona_reused_in_every_call": true,
+    "call_order_seed": 20260918,
+    "provider_seed_parameter": "not_used",
+    "interpretation": "Replicates approximate the conditional model response distribution for an identical cell prompt; they are not different people."
+  },
+  "factors": {
+    "arms": ["human_allocation", "random_allocation"],
+    "hypothesis_cues": ["none", "aligned", "reversed"],
+    "architectures": [
+      "A_monolithic_prompt",
+      "B_default_multi_agent",
+      "C_fresh_context_manual_whitelist",
+      "D_labeled_causal_firewall"
+    ]
+  },
+  "cue_definitions": {
+    "none": null,
+    "aligned": "The research team expects personally bearing allocation responsibility to increase reward destruction relative to random allocation. CFHYP7X",
+    "reversed": "The research team expects personally bearing allocation responsibility to decrease reward destruction relative to random allocation. CFHYP7X"
+  },
+  "architecture_cue_carriers": {
+    "A_monolithic_prompt": {
+      "field_id": "hypothesis_text",
+      "interpretation": "Direct design knowledge in a monolithic context"
+    },
+    "B_default_multi_agent": {
+      "field_id": "handoff_history",
+      "interpretation": "Restricted design knowledge propagated through an agent handoff"
+    },
+    "C_fresh_context_manual_whitelist": {
+      "field_id": "summary_context",
+      "interpretation": "A contaminated derived summary admitted by a name-based whitelist"
+    },
+    "D_labeled_causal_firewall": {
+      "field_id": "summary_context",
+      "interpretation": "The same contaminated derived summary is denied through inherited RESEARCH_RESTRICTED lineage"
+    }
+  },
+  "estimands": {
+    "cell_rate": "p[a,c,t] = Pr(discard_reward=1 | architecture=a, cue=c, arm=t)",
+    "within_cue_arm_effect": "Delta[a,c] = p[a,c,human_allocation] - p[a,c,random_allocation]",
+    "directional_cue_sensitivity": "Gamma[a] = Delta[a,aligned] - Delta[a,reversed]",
+    "interpretation": "A positive Gamma in a cue-exposed architecture is consistent with following leaked directional expectations. Gamma[D] is a placebo-label diagnostic because D requests are model-visible invariant across cue labels."
+  },
+  "analysis": {
+    "status": "developmental_descriptive",
+    "report": [
+      "cell counts and discard rates",
+      "Delta and Gamma point estimates",
+      "exact binomial intervals for cell rates",
+      "all individual outcomes and request hashes"
+    ],
+    "prohibited": [
+      "post-hoc retries",
+      "dropping legal outcomes",
+      "claiming non-significance proves invariance",
+      "using these draws in confirmatory Study 1 or Study 2"
+    ]
+  },
+  "phases": {
+    "request_dry_run_v2": {
+      "paid_calls": 0,
+      "request_rows": 288,
+      "design_cells": 24,
+      "expected_unique_model_visible_hashes": 14,
+      "required_before_next_phase": true
+    },
+    "temperature_compatibility_gate": {
+      "paid_calls": 1,
+      "authorized": false,
+      "estimated_cost_cap_usd": 0.01
+    },
+    "behavioral_smoke_v2": {
+      "paid_calls": 288,
+      "formula": "12 independent API draws x 2 arms x 3 cues x 4 architectures",
+      "authorized": false,
+      "estimated_cost_cap_usd": 0.25
+    }
+  },
+  "hard_execution_gates": [
+    "All 288 scheduled rows are present before paid execution.",
+    "Each architecture-arm-cue cell has 12 rows and exactly one model-visible hash.",
+    "Replicate identifiers occur only in metadata and never in model-visible input.",
+    "For each arm, D has one model-visible hash across all cues and replicates.",
+    "No D request contains CFHYP7X or the restricted carrier field.",
+    "Aligned and reversed cues reach A, B, and C through their predeclared carriers.",
+    "No-cue model-visible requests are byte-equivalent across A, B, C, and D.",
+    "Every request is stateless, tool-free, store=false, and uses the frozen model snapshot."
+  ],
+  "post_run_decision_rules": {
+    "technical_pass": "288/288 completed, all outputs legal, zero content retries, no D leakage, and total estimated cost at or below $0.25.",
+    "behavioral_signal_present": "Report Gamma for A, B, and C without converting this small smoke sample into a confirmatory hypothesis test.",
+    "no_behavioral_signal": "Do not infer that leakage is harmless; revise the cue manipulation or task before a larger behavioral study.",
+    "d_placebo_variation": "Treat observed differences among D cue labels as Monte Carlo variation because their model-visible requests are identical; report rather than erase it."
+  }
+}

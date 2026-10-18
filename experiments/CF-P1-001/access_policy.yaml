@@ -1,0 +1,52 @@
+{
+  "policy_id": "CF-P1-001-access",
+  "policy_version": "0.1.0",
+  "default": "deny",
+  "missing_label": "deny",
+  "unknown_field": "deny",
+  "respondent_allowed_labels": [
+    "PARTICIPANT_VISIBLE",
+    "PARTICIPANT_SELF",
+    "DERIVED_PARTICIPANT_VIEW"
+  ],
+  "label_rank": {
+    "PARTICIPANT_VISIBLE": 0,
+    "PARTICIPANT_SELF": 0,
+    "DERIVED_PARTICIPANT_VIEW": 0,
+    "SYSTEM_ONLY": 10,
+    "RESEARCH_RESTRICTED": 20,
+    "EMBARGOED_RESULT": 30,
+    "ANALYSIS_RESTRICTED": 40,
+    "AUDIT_ONLY": 50
+  },
+  "field_registry": {
+    "participant_role": {"label": "PARTICIPANT_VISIBLE", "stage": "behavior_generation", "arm_scope": "common"},
+    "persona_state": {"label": "PARTICIPANT_SELF", "stage": "pre_treatment", "arm_scope": "participant"},
+    "common_scenario": {"label": "PARTICIPANT_VISIBLE", "stage": "behavior_generation", "arm_scope": "common"},
+    "current_stimulus": {"label": "PARTICIPANT_VISIBLE", "stage": "behavior_generation", "arm_scope": "current_arm"},
+    "response_schema": {"label": "PARTICIPANT_VISIBLE", "stage": "behavior_generation", "arm_scope": "common"},
+    "hypothesis_text": {"label": "RESEARCH_RESTRICTED", "stage": "design", "arm_scope": "study"},
+    "expected_direction": {"label": "RESEARCH_RESTRICTED", "stage": "design", "arm_scope": "study"},
+    "other_arm_stimulus": {"label": "RESEARCH_RESTRICTED", "stage": "design", "arm_scope": "opposite_arm"},
+    "human_benchmark": {"label": "EMBARGOED_RESULT", "stage": "analysis_after_lock", "arm_scope": "study"},
+    "handoff_history": {"label": "RESEARCH_RESTRICTED", "stage": "handoff", "arm_scope": "opposite_arm"},
+    "summary_context": {"label": "RESEARCH_RESTRICTED", "stage": "handoff", "arm_scope": "study"},
+    "session_context": {"label": "SYSTEM_ONLY", "stage": "execution", "arm_scope": "session"},
+    "retry_context": {"label": "SYSTEM_ONLY", "stage": "execution", "arm_scope": "session"},
+    "tool_context": {"label": "EMBARGOED_RESULT", "stage": "execution", "arm_scope": "study"},
+    "audit_feedback": {"label": "AUDIT_ONLY", "stage": "audit_after_lock", "arm_scope": "run"}
+  },
+  "derivation": {
+    "inheritance": "most_restrictive",
+    "label_loss": "deny",
+    "scope_loss": "deny"
+  },
+  "execution": {
+    "fresh_context_required": true,
+    "cross_participant_memory": "deny",
+    "cross_arm_memory": "deny",
+    "retry_from_original_packet_only": true,
+    "audit_backflow": "deny"
+  }
+}
+
