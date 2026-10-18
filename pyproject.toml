@@ -1,0 +1,8 @@
+[project]
+name = "causal-firewall-study0"
+version = "0.2.0"
+description = "Reproducible Study 0 implementation of causal information-flow control for LLM social experiments"
+requires-python = ">=3.10"
+
+[tool.unittest]
+start-directory = "tests"
