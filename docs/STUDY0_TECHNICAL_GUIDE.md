@@ -71,4 +71,5 @@ Raw paid-run artifacts remain local. The public CSV contains the experimental fa
 
 ## References
 Gordon-Hecker, T., Rosensaft-Eshel, D., Pittarello, A., Shalvi, S., & Bereby-Meyer, Y. (2017). Not taking responsibility: Equity trumps efficiency in allocation decisions. Journal of Experimental Psychology: General, 146(6), 771–775. https://doi.org/10.1037/xge0000273
+
 Cui, Z., Li, N., & Zhou, H. (2025). A large-scale replication of scenario-based experiments in psychology and management using large language models. Nature Computational Science, 5, 627–634. https://doi.org/10.1038/s43588-025-00840-7
