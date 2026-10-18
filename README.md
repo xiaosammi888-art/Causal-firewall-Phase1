@@ -1,6 +1,5 @@
 # Causal-firewall-Study0
-This is the zero-cost reproducibility repository for Study 0 of the Causal Firewall project. It packages a reusable information-flow control layer for LLM-based social experiments together with one complete worked example, deterministic fault tests, provider-shaped request audits, sanitized outcomes, and an allowlist-based public-release builder.
-
+This is the zero-cost reproducibility repository for Study 0 of the Causal Firewall project. It packages a reusable information-flow control layer for LLM-based social experiments together with one complete worked example, deterministic fault tests, provider-shaped request audits, and sanitized outcomes.
 ## Offline command
 'python3 scripts/reproduce_study0_offline.py'
 The above command runs the curated unit tests, rebuilds the F0-F7 deterministic fault audit, serializes and audits provider-shaped requests without a network client, regenerates the 288-row execution schedule, and verifies the released data against its SHA-256 manifest.
