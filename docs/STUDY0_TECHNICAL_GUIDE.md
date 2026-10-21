@@ -1,8 +1,8 @@
-#Study 0 Technical and Experimental Guide
+#Phase 1 Technical and Experimental Guide
 
 ## Purpose and result
 
-Study 0 built and tested one complete causal-firewall workflow for an LLM-simulated experiment. The workflow starts with a human-readable experiment, converts it into a machine-readable contract, enforces field-level information rules before the model call, locks the behavioral outcome, and audits every request without feeding audit information back to the respondent.
+Phase 1 built and tested one complete causal-firewall workflow for an LLM-simulated experiment. The workflow starts with a human-readable experiment, converts it into a machine-readable contract, enforces field-level information rules before the model call, locks the behavioral outcome, and audits every request without feeding audit information back to the respondent.
 The system passed every registered technical gate. The behavioral smoke also showed directional cue sensitivity when hidden research expectations reached A (monolithic prompt), B (default multi-agent), or C (manual whitelist). D (causal firewall) blocked those expectations. 
 
 ## Source experiment
