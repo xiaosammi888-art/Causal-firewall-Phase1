@@ -1,5 +1,5 @@
 # Causal-firewall-Phase1
-This is the zero-cost reproducibility repository for phase 1 of the Causal Firewall project. It packages a reusable information-flow control layer for LLM-based social experiments together with one complete worked example, deterministic fault tests, provider-shaped request audits, and sanitized outcomes.
+This is the zero-cost reproducibility repository for phase 1 of the Causal Firewall project. It packages a reusable information-flow control layer for LLM-based social experiments together with one complete worked example, deterministic fault tests, provider-shaped request audits, and sanitized outcomes. (Note: Study0 corresponds to phase 1 in the file name).
 
 ## Offline command
 'python3 scripts/reproduce_study0_offline.py'
