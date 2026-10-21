@@ -28,9 +28,9 @@ flowchart LR
 ```
 The firewall classifies information before model invocation, propagates the most restrictive label through derived-field lineage, checks participant and treatment-arm scope, and denies missing or unregistered information by default. It also separates outcome production from audit and analysis so that later stages cannot rewrite a locked behavioral outcome.
 
-## Study 0 worked example
+## Phase 1 worked example
 
-Study 0 adapts Gordon-Hecker et al. (2017), Experiment 1b. It compares four architectures:
+Phase 1 adapts Gordon-Hecker et al. (2017), Experiment 1b. It compares four architectures:
 
 | Architecture | Information carrier | Protection mechanism |
 |---|---|---|
