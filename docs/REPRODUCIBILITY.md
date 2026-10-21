@@ -1,4 +1,4 @@
-# Study 0 Reproduction Guide
+# Phase 1 Reproduction Guide
 
 From the repository root, run:
 
