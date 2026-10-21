@@ -5,7 +5,7 @@ This is the zero-cost reproducibility repository for phase 1 of the Causal Firew
 'python3 scripts/reproduce_study0_offline.py'
 The above command runs the curated unit tests, rebuilds the F0-F7 deterministic fault audit, serializes and audits provider-shaped requests without a network client, regenerates the 288-row execution schedule, and verifies the released data against its SHA-256 manifest.
 
-## Study0 Reproduction Path
+## Phase1 Reproduction Path
 Step 1: Read this page for the claim and architecture of the proposed model.
 Step 2: Run'python3 scripts/reproduce_study0_offline.py'.
 Step 3: Read `docs/STUDY0_TECHNICAL_GUIDE.md` for the end-to-end implementation.
