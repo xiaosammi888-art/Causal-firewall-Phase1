@@ -56,4 +56,4 @@ The registered fault set covers clean execution, opposite-arm history, restricte
 ## Reproduction versus replication
 
 The public data and exact request hashes are the durable reproduction path. Calling a provider again is a new replication because model snapshots, provider infrastructure, and stochastic draws can change. A new paid run must receive a new run ID and record its model version, request configuration, cost, and contract hashes.
-Paid-run source artifacts, provider response identifiers, local authorization records, credentials, restricted mappings, and Study 1 materials are not part of this repository.
+Paid-run source artifacts, provider response identifiers, local authorization records, credentials, restricted mappings, and phase 2 materials are not part of this repository.
